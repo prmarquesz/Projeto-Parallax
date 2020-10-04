@@ -1,0 +1,67 @@
+body, html{ /*em parallax é preciso formatar o body e o html com height 100%*/
+	margin: 0;	/*remove a margem da pg*/
+	font: 16px "Lato", sans-serif; /*tamanho da fonte / fonte do texto / e sans-serif no caso do usuário não possuir a fonte "Lato"*/	
+	color: #777; /*cor dos elementos dentro do body e html*/
+	height: 100%; /*altura 100% para ocupar toda a tela*/
+}
+
+.conteudo{
+	color: #777; /*cor do container*/
+	background-color: white; /*cor de fundo do container*/
+	text-align: justify; /*alinhamento do texto*/
+	padding: 50px 80px; /*espaçamento interno*/
+}
+
+h3{
+	text-transform: uppercase; /*formata o texto em maiúsculo*/
+	color: #111; /*cor do texto*/
+	text-align: center; /*alinha o texto no centro*/
+}
+
+p{
+	margin-bottom: 20px; /*espaçamento inferior do p*/
+}
+
+/* Efeito Parallax
+-----------------------*/
+.caixa1, .caixa2, .caixa3, .caixa4{
+	position: relative; /*posição relativa, para que possa suportar position absolute*/
+	height: 100%; /*deixa a altura das caixas em 100% */
+	opacity: 0.7; /*opacidade do conteúdo das caixas*/
+	background-repeat: no-repeat; /*faz com que as imgs das caixas não repitam*/
+	background-size: cover;/*faz com que a img ocupe 100% do espaço da caixa*/
+	background-position: center;/*alinha as imgs das caixas no centro*/
+	background-attachment: fixed;/*cria o efeito parallax (img fixada não acompanha o scroll)*/
+}
+
+.caixa1{
+	background-image: url(../imagens/imagem1.jpg); /*img de fundo*/
+}
+
+.caixa2{
+	background-image: url(../imagens/imagem2.jpg); /*img de fundo*/
+}
+
+.caixa3{
+	background-image: url(../imagens/imagem3.jpg); /*img de fundo*/
+}
+
+.caixa4{
+	background-image: url(../imagens/imagem4.jpg); /*img de fundo*/
+}
+
+.conteudo-titulo{
+	position: absolute; /*posição absoluta, meio que flutua mais fácil*/
+	top: 45%; /*distância do topo*/
+	width: 100%; /*largura líquida de 100%*/
+	text-align: center; /*alinha o texto no centro*/
+}
+
+.conteudo-titulo span.titulo{
+	color: #fff; /*cor do texto dentro do span*/
+	background-color: #111; /*cor de fundo do span*/
+	padding: 18px; /*define um espaçamento interno*/
+	font-size: 25px; /*tamanho do texto contido em span*/
+	letter-spacing: 5px; /*cria um espaçamento entre cada letra do texto contido em span*/
+	text-transform: uppercase; /*formata o texto em maiúsculo*/
+}
